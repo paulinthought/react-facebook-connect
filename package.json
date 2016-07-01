@@ -1,0 +1,49 @@
+{
+  "name": "fbconnect",
+  "version": "1.0.0",
+  "description": "react facebook connect",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch & static ./ --port 8080 --cache 0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify -o ./compiled.js -v -d index.js"
+  },
+  "author": "Paul Grattan",
+  "license": "ISC",
+  "homepage": "https://github.com/paulinthought/react-facebook-connect.git",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-2"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react",
+            "stage-2"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-2": "^6.11.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "node-static": "~0.7.7",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "moment": "^2.13.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
